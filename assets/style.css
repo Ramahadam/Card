@@ -42,7 +42,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50.313rem;
+  height: 100vh;
 }
 
 @media screen and (min-width: 1024px) {
