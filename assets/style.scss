@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,*::after
+{
+    box-sizing: border-box;
+}
+/*  ___________________ Veriables ______________ */
+
+//Primary
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$shadow: hsla(245, 61%, 64%, 0.281);
+
+//Neutral 
+ $veryPaleBlue: hsl(225, 100%, 98%);
+ $desaturatedBlue: hsl(224, 23%, 55%);
+ $darkBlue: hsl(223, 47%, 23%);
+
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    background-image: linear-gradient(to top,  $paleBlue, 10%, #f5f7ff00),
+     url(../images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: $desaturatedBlue;
+    line-height: 1.5;
+    //TODO bg for desktop
+    @media screen and (min-width: 1024px ) {
+        background-image: linear-gradient(to top,  $paleBlue, 10%, #b4c0f067),
+        url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+    }
+}    
+
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50.313rem;
+
+    @media screen and (min-width: 1024px) {
+        height: 55.313rem;
+    }
+}
+
+.card{
+    text-align: center;
+    background: #fff;
+    height: 40.625rem;
+    width:20.813rem;
+    max-width: 90%;
+    margin: 0 auto;
+   border-radius: 1rem;
+      
+  @media screen and (min-width: 1024px) {
+      width: 31.375rem;
+      height: 48.5rem;
+  }
+
+        
+    &__header{
+       margin-bottom: 2.625rem;
+        img{
+            width: 100%;
+            max-height: 15.375rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+    }
+
+    &__body{
+        max-width: 82%;
+        margin: 0 auto;
+        @media screen and (min-width: 1024px) {
+            max-width: 71%;
+        }
+        h1{
+            color: $darkBlue;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        p{
+            // padding-left: 2.188rem;
+            // padding-right: 2.188rem;
+            margin-bottom: 1.875rem;
+        }
+        span{
+            display: block;
+        }
+        .card__plan{
+            background: $veryPaleBlue;
+            // max-width: 90%;
+            border-radius: 1rem;
+            margin: 0 auto;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.625rem;
+
+            .plan {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+               
+                &__name
+                {
+                font-weight: 700;
+                color: $darkBlue;
+                 }
+
+                 &__price{
+                     font-size: 0.9rem;
+                 }
+            
+        }
+
+        .price{
+            display: flex;
+            column-gap: 1rem;
+        }
+    }
+
+     .btn{
+         padding: 1rem 0;
+         border: none;
+         outline: none;
+         border-radius: 20px;
+         display: block;
+         margin: 0 auto;
+        //  width: 18.875rem;
+        //  width: 90%;
+         background: $brightBlue;
+         color:  $veryPaleBlue;
+         font-weight: 500;
+         font-size: 1.2rem;
+         margin-bottom: 1.875rem;
+         box-shadow: 0 15px 17px 7px $shadow;
+        
+
+         &:hover{
+             background-color: #6d6dca;
+         }
+         
+      
+     }
+     a{
+        text-decoration: none;
+        display: block;
+
+        
+    }
+    a.change{
+        text-decoration:underline !important;
+     }
+     .order{
+         padding: 0;
+         color:  $desaturatedBlue;
+         font-weight: 700;
+         font-size: 1.2rem;
+         padding-bottom: 2.188rem;
+     }
+    }
+}
+
