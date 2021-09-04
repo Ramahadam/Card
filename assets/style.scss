@@ -47,7 +47,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50.313rem;
+    height: 100vh;
 
     @media screen and (min-width: 1024px) {
         height: 55.313rem;
@@ -57,7 +57,7 @@ body{
 .card{
     text-align: center;
     background: #fff;
-    height: 40.625rem;
+    height: 38.625rem;
     width:20.813rem;
     max-width: 90%;
     margin: 0 auto;
